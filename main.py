@@ -7,10 +7,10 @@ import unicodedata
 # --- CONFIGURACIÓN ---
 # En Render, estas variables se configuran en el panel web por seguridad.
 # Pero para probar rápido, puedes ponerlas aquí (aunque no es lo ideal para seguridad).
-ACCOUNT_SID = os.environ.get('TWILIO_SID', 'PON_TU_SID_AQUI')
-AUTH_TOKEN = os.environ.get('TWILIO_TOKEN', 'PON_TU_TOKEN_AQUI')
+ACCOUNT_SID = os.environ.get('TWILIO_SID', 'ACb97d6d1ec8c39c3920603deff2bcec32')
+AUTH_TOKEN = os.environ.get('TWILIO_TOKEN', 'a0e5b8cc2251f10353f968bd0fb9b455')
 # Número que compraste o te dio Twilio (Debe poder recibir SMS y hacer llamadas)
-SERVER_PHONE = os.environ.get('TWILIO_NUMBER', 'PON_TU_NUMERO_TWILIO_AQUI') 
+SERVER_PHONE = os.environ.get('TWILIO_NUMBER', '+12185277341') 
 
 app = Flask(__name__)
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
@@ -96,4 +96,5 @@ def bot():
     return str(resp)
 
 if __name__ == "__main__":
+
     app.run()
